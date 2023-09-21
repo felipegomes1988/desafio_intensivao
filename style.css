@@ -1,0 +1,290 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+:root {
+
+  font-size: 62,5%;
+  
+  --color-base-white: #ffffff;
+  --color-base-light-gray: #F9F4FB;
+  --color-base-purple: #B52184;
+  --color-base-dark-blue: #312D64;
+
+}
+
+html, body, input, button, textarea {
+  font-family: 'Mulish', sans-serif;
+}
+
+body{
+  margin: 0 auto;
+}
+
+header{
+  margin: 0 auto;
+  padding: 0 3.2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-base-light-gray);
+
+  background: url(assets/astronauta.png) var(--color-base-light-gray) no-repeat;
+  background-position: center 0;
+  background-size: 36.4rem;
+}
+
+
+header .title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+header .title h1{
+  color: var(--color-base-purple);
+  font-weight: 900;
+  font-size: 3.2rem;
+
+  margin: 38.7rem 0 0;
+
+}
+
+header .title p{
+  color: var(--color-base-dark-blue);
+  font-weight: 600;
+  font-size: 2rem;
+
+  margin-top: .5rem;
+}
+
+header .title img:nth-child(3){
+  width: 6rem;
+  height: 10.5rem;
+
+  margin: 3.5rem 0 9rem;
+}
+
+
+
+main .cards{
+  padding: 5rem 4rem;
+
+  background: rgb(52,49,147);
+  background: linear-gradient(146deg, rgba(52,49,147,1) 0%, rgba(48,44,99,1) 100%);
+  display: grid;
+  grid-template-rows: repeat(3 1fr);
+  gap: 5rem;
+}
+
+.cards .card{
+  aspect-ratio: 1;
+ 
+  background-color: var(--color-base-white);
+
+  padding: 2.6rem;
+  padding-right: 5.6rem;
+
+  border-radius: 2rem;
+}
+
+.cards .card img{
+  width: 8rem;
+  height: 8rem;
+}
+
+.cards .card h1{
+  margin-top: 3rem;
+  color: var(--color-base-purple);
+
+  font-weight: 900;
+  font-size: 2.9rem;
+
+}
+
+.cards .card p{
+  margin-top: 1.2rem;
+  font-weight: 600;
+  color: var(--color-base-dark-blue);
+  font-size: 1.6rem;
+}
+
+main .message{
+  background-color: var(--color-base-light-gray);
+  padding: 7.8rem 4.3rem 6.5rem;
+}
+
+.form h1 {
+font-weight: 900;
+font-size: 3.2rem;
+color: var(--color-base-purple);
+}
+
+#contact{
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  margin-top: 4.2rem;
+}
+
+#contact input {
+  border: 2px solid var(--color-base-dark-blue);
+  border-radius: 1.6rem;
+  padding-left: 5rem;
+
+  height: 4.8rem;
+
+  font-weight: 600;
+  font-size: 1.6rem;
+
+  
+} 
+
+#contact input::placeholder{
+  
+  color: var(--color-base-dark-blue);
+}
+
+
+#contact textarea{
+  height: 12.6rem;
+  width: 100%;
+
+  padding: 1.6rem;
+
+  border: 2px solid var(--color-base-dark-blue);
+  border-radius: 1.6rem;
+
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+#contact textarea::placeholder{
+  color: var(--color-base-dark-blue);
+}
+
+
+#name {
+  background: url(assets/person.svg) #ffffff no-repeat;
+
+  background-position: 1.4rem center;
+
+  background-size: 2.4rem;
+
+}
+
+#email {
+  background: url(assets/at.svg) #ffffff no-repeat;
+
+  background-position: 1.4rem center;
+
+  background-size: 2.4rem;
+
+}
+
+#contact button{
+  width: 15.1rem;
+  height: 4.5rem;
+
+  background: rgb(52,49,147);
+  background: linear-gradient(146deg, rgba(52,49,147,1) 0%, rgba(48,44,99,1) 100%);
+
+  border: none;
+  border-radius: 1.6rem;
+
+  color: var(--color-base-white);
+
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+#contact button:hover{
+  background: var(--color-base-purple);
+  background: linear-gradient(146deg, var(--color-base-purple) 0%, #500756 100%);
+}
+
+footer{
+
+  height: 7rem;
+  width: 100%;
+  
+
+  background: rgb(52,49,147);
+  background: linear-gradient(146deg, rgba(52,49,147,1) 0%, rgba(48,44,99,1) 100%);
+
+  color: var(--color-base-white);
+
+  font-weight: 600;
+  font-size: 1.8rem;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+/*animations*/
+
+header img:nth-child(3):hover{
+  animation: jumpup .5s ease-out ;
+}
+
+@keyframes jumpup{
+  50%{
+    transform: translateY(-.5rem);
+  }
+}
+
+/*responsivity*/
+
+@media (min-width: 1300px){
+
+  main .cards{
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: repeat(3 1fr);
+}
+
+header{
+  padding: 0 10.9rem ;
+  background: url(assets/astronauta.png) var(--color-base-light-gray) no-repeat;
+  background-position: calc(100vw - 74.9rem) 0;
+  background-size: 71.9rem;
+
+  height: 83.6rem;
+
+  align-items: start;
+}
+
+header .title{
+
+  align-items: start;
+
+}
+
+header .title img:nth-child(3){
+  width: 6rem;
+  height: 10.5rem;
+
+  margin: 17.9rem 0 9rem;
+}
+
+.form{
+  width: 59.5rem;
+}
+.message{
+  background: url(assets/star_backround.png) no-repeat;
+  background-size: 64.4rem;
+  background-position: right;
+}
+
+
+}
